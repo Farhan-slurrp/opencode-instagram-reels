@@ -13,6 +13,8 @@ jobs:
         run: swift build -c release
       - name: Build application bundle
         run: ./scripts/build-app.sh
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
       - name: Build TUI plugin
         run: |
           bun build opencode-reels.tsx \
