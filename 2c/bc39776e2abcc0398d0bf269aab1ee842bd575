@@ -1,0 +1,19 @@
+.github/workflows/ci.yml
+  s_b58522b42dd191::t_30787845cd5c93 16-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "2cbc39776e2abcc0398d0bf269aab1ee842bd575",
+  "prompts": {},
+  "sessions": {
+    "s_b58522b42dd191": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_fa6a46da9ffegDtDEhP6tYtGBy",
+        "model": "gpt-5.6-luna"
+      },
+      "human_author": "Farhan Ahmad Nurzi <farhan.nurzi@glovoapp.com>"
+    }
+  }
+}
