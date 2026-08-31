@@ -1,0 +1,48 @@
+LICENSE
+  s_b58522b42dd191::t_77a543e6ebf22f 1-21
+install.sh
+  s_b58522b42dd191::t_4ab2439c7aa167 5
+  s_b58522b42dd191::t_582d6de62603ee 9-41
+  s_b58522b42dd191::t_bec0c6f5f6f394 2-4
+  s_b58522b42dd191::t_b8406c7773b8fe 6-8
+README.md
+  s_b58522b42dd191::t_c30a4cad386a03 3-7,9-34,36,38-39,43-45,47-80
+  h_542f8aaf5a548e 8
+  s_b58522b42dd191::t_582d6de62603ee 35,37,40-42,46
+  s_b58522b42dd191::t_bc78e9cb47a30f 1-2
+opencode-reels.tsx
+  s_b58522b42dd191::t_4ab2439c7aa167 5-8
+  s_b58522b42dd191::t_8084080fb49c27 2-4
+  s_b58522b42dd191::t_4ab093bdce58b9 9-11
+VERSION
+  s_b58522b42dd191::t_77a543e6ebf22f 1
+Resources/Info.plist
+  s_b58522b42dd191::t_77a543e6ebf22f 1-24
+scripts/build-app.sh
+  s_b58522b42dd191::t_77a543e6ebf22f 1-14
+.github/workflows/ci.yml
+  s_b58522b42dd191::t_77a543e6ebf22f 1-23
+.gitignore
+  s_b58522b42dd191::t_77a543e6ebf22f 1-2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "1a673ba9c2d861378488cca4bf9900595ed5c9c6",
+  "prompts": {},
+  "humans": {
+    "h_542f8aaf5a548e": {
+      "author": "Farhan Ahmad Nurzi <farhan.nurzi@glovoapp.com>"
+    }
+  },
+  "sessions": {
+    "s_b58522b42dd191": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_fa6a46da9ffegDtDEhP6tYtGBy",
+        "model": "gpt-5.6-luna"
+      },
+      "human_author": "Farhan Ahmad Nurzi <farhan.nurzi@glovoapp.com>"
+    }
+  }
+}
