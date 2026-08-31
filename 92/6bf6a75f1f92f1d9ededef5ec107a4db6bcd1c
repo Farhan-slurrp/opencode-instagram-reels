@@ -1,0 +1,38 @@
+Sources/ReelsBrowser/BrowserPanel.swift
+  s_b58522b42dd191::t_759c636f36d16d 1-10
+Sources/ReelsBrowser/WindowPositioner.swift
+  s_b58522b42dd191::t_759c636f36d16d 1-39
+Sources/ReelsBrowser/main.swift
+  s_b58522b42dd191::t_759c636f36d16d 5
+install.sh
+  s_b58522b42dd191::t_6703f095381ff3 8,16-20
+README.md
+  h_542f8aaf5a548e 7
+  s_b58522b42dd191::t_56fdbe465940d4 81-85
+  s_b58522b42dd191::t_6703f095381ff3 4-5,9-10,28-30,35-36,62-67
+Sources/ReelsBrowser/ReelsConfiguration.swift
+  s_b58522b42dd191::t_759c636f36d16d 1-9
+Sources/ReelsBrowser/AppDelegate.swift
+  s_b58522b42dd191::t_759c636f36d16d 1-101
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "926bf6a75f1f92f1d9ededef5ec107a4db6bcd1c",
+  "prompts": {},
+  "humans": {
+    "h_542f8aaf5a548e": {
+      "author": "Farhan Ahmad Nurzi <farhan.nurzi@glovoapp.com>"
+    }
+  },
+  "sessions": {
+    "s_b58522b42dd191": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_fa6a46da9ffegDtDEhP6tYtGBy",
+        "model": "gpt-5.6-luna"
+      },
+      "human_author": "Farhan Ahmad Nurzi <farhan.nurzi@glovoapp.com>"
+    }
+  }
+}
