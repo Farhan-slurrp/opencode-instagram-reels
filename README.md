@@ -4,7 +4,7 @@ A macOS companion browser launched from the OpenCode TUI sidebar. It opens
 Instagram Reels in an attached floating `WKWebView` panel and keeps login
 cookies between launches.
 
-![OpenCode Instagram Reels](image.png)
+![OpenCode Instagram Reels](image-1.png)
 
 The panel is a separate native window positioned beside OpenCode. The terminal
 TUI cannot host an interactive WebKit view inside its character buffer.
