@@ -1,13 +1,13 @@
 # OpenCode Instagram Reels
 
 A macOS companion browser launched from the OpenCode TUI sidebar. It opens
-Instagram Reels in a native `WKWebView` window and keeps login cookies between
-launches.
+Instagram Reels in an attached floating `WKWebView` panel and keeps login
+cookies between launches.
 
-![OpenCode Instagram Reels](image.png)
+![OpenCode Instagram Reels](image-1.png)
 
-The browser is intentionally a separate native window. OpenCode's terminal TUI
-cannot host an interactive WebKit view inside its character buffer.
+The panel is a separate native window positioned beside OpenCode. The terminal
+TUI cannot host an interactive WebKit view inside its character buffer.
 
 ## Requirements
 
@@ -25,13 +25,15 @@ From a checkout of this repository:
 
 The installer:
 
-- builds `opencode-reels-browser`
-- installs it to `~/.config/opencode/bin`
+- builds and signs `Instagram Reels.app`
+- installs the app to `~/Applications`
+- installs an app launcher to `~/.config/opencode/bin`
 - installs the TUI plugin to `~/.config/opencode/plugins`
 - registers the plugin in `~/.config/opencode/tui.jsonc`
 
 Fully quit and restart OpenCode, open a session, and click **Open Instagram
-Reels** in the sidebar. The first launch may require signing in to Instagram.
+Reels** in the sidebar. The panel opens beside the terminal; the first launch
+may require signing in to Instagram.
 
 ## Build An App
 
@@ -57,6 +59,12 @@ Run the companion directly:
 swift run opencode-reels-browser
 ```
 
+Build and install the attached panel:
+
+```sh
+./install.sh
+```
+
 Build the TUI plugin independently:
 
 ```sh
@@ -70,7 +78,11 @@ bun build opencode-reels.tsx \
 
 ## Project Layout
 
-- `Sources/ReelsBrowser/main.swift`: native WebKit companion
+- `Sources/ReelsBrowser/AppDelegate.swift`: browser lifecycle and view wiring
+- `Sources/ReelsBrowser/BrowserPanel.swift`: keyable borderless panel behavior
+- `Sources/ReelsBrowser/WindowPositioner.swift`: screen and terminal placement
+- `Sources/ReelsBrowser/ReelsConfiguration.swift`: shared app configuration
+- `Sources/ReelsBrowser/main.swift`: application bootstrap
 - `opencode-reels.tsx`: OpenCode sidebar plugin
 - `install.sh`: local installation and TUI registration
 - `scripts/build-app.sh`: `.app` packaging and signing

@@ -5,6 +5,7 @@ ROOT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 BIN_DIR="${HOME}/.config/opencode/bin"
 PLUGIN_DIR="${HOME}/.config/opencode/plugins"
 TUI_CONFIG="${HOME}/.config/opencode/tui.jsonc"
+APP_INSTALL_DIR="${HOME}/Applications/Instagram Reels.app"
 
 if [ "$(uname -s)" != "Darwin" ]; then
   printf '%s\n' "This companion currently supports macOS only." >&2
@@ -12,8 +13,11 @@ if [ "$(uname -s)" != "Darwin" ]; then
 fi
 
 mkdir -p "$BIN_DIR" "$PLUGIN_DIR"
-swift build -c release --package-path "$ROOT_DIR"
-cp "$ROOT_DIR/.build/release/opencode-reels-browser" "$BIN_DIR/opencode-reels-browser"
+"$ROOT_DIR/scripts/build-app.sh"
+mkdir -p "$(dirname -- "$APP_INSTALL_DIR")"
+rm -rf "$APP_INSTALL_DIR"
+cp -R "$ROOT_DIR/dist/Instagram Reels.app" "$APP_INSTALL_DIR"
+printf '%s\n' '#!/bin/sh' "exec /usr/bin/open -a \"$APP_INSTALL_DIR\"" > "$BIN_DIR/opencode-reels-browser"
 chmod 755 "$BIN_DIR/opencode-reels-browser"
 cp "$ROOT_DIR/opencode-reels.tsx" "$PLUGIN_DIR/opencode-instagram-reels.tsx"
 
